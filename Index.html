@@ -215,14 +215,100 @@
 
         <!-- Featured Tool -->
         <div class="featured-tool">
-            <div class="featured-content">
-                <h2>Image Compressor</h2>
-                <p>Reduce image file size without losing quality. Supports JPG, PNG, and WebP formats.</p>
-                <a href="/image-compressor" class="btn">Compress Images Now</a>
-            </div>
-            <div class="featured-image">
-                <img src="https://via.placeholder.com/500x300" alt="Image Compression Tool Preview">
-            </div>
+            <div class="featured-card">
+    <a href="/image-compressor" class="featured-content-link">
+        <div class="featured-content">
+            <h2>Image Compressor</h2>
+            <p>Reduce image file size without losing quality. Supports JPG, PNG, and WebP formats.</p>
+            <span class="btn">Compress Images Now</span>
+        </div>
+    </a>
+    <a href="/image-compressor" class="featured-image-link">
+        <div class="featured-image">
+            <img src="https://via.placeholder.com/500x300" alt="Image Compression Tool Preview">
+        </div>
+    </a>
+</div>
+
+<style>
+    .featured-card {
+        display: flex;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        margin: 20px 0;
+    }
+
+    .featured-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .featured-content-link, .featured-image-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .featured-content {
+        flex: 1;
+        padding: 25px;
+    }
+
+    .featured-content h2 {
+        color: #2d3748;
+        margin-bottom: 12px;
+        font-size: 1.8rem;
+    }
+
+    .featured-content p {
+        color: #4a5568;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #4a6bff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 500;
+        transition: background 0.3s ease;
+    }
+
+    .featured-content-link:hover .btn {
+        background: #3a5bef;
+    }
+
+    .featured-image-link {
+        flex: 1;
+        min-width: 40%;
+        position: relative;
+    }
+
+    .featured-image {
+        height: 100%;
+    }
+
+    .featured-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .featured-card {
+            flex-direction: column;
+        }
+        
+        .featured-image {
+            height: 200px;
+        }
+    }
+</style>
         </div>
 
         <!-- PDF Tools Section -->
